@@ -41,12 +41,12 @@ A %{languageenglazy} dictionary for use with aspell, a spelling checker.
 %make
 
 %install
-rm -fr $RPM_BUILD_ROOT
+rm -fr %{buildroot}
 
 %makeinstall_std
 
 %clean
-rm -fr $RPM_BUILD_ROOT
+rm -fr %{buildroot}
 
 %files
 %defattr(644,root,root,755)
