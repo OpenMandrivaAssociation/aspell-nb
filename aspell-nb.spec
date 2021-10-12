@@ -12,6 +12,7 @@ Group:		System/Internationalization
 License:	GPLv2
 Url:		http://aspell.sourceforge.net/
 Source0:	ftp://ftp.gnu.org/aspell/aspell-%{languagecode}-%{src_ver}.tar.bz2
+Patch: aspell-nb-0.50.1-0.utf-filename.patch
 
 BuildRequires:	aspell >= 0.50
 Requires:	aspell >= 0.50
@@ -29,15 +30,17 @@ A %{languageenglazy} dictionary for use with aspell, a spelling checker.
 
 %prep
 %setup -qn %{name}-%{src_ver}
+%autopatch -p1
+cp bokmal.alias bokmål.alias
 
 %build
 # don't use configure macro
 ./configure
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc README Copyright
