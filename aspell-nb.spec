@@ -12,7 +12,7 @@ Group:		System/Internationalization
 License:	GPLv2
 Url:		http://aspell.sourceforge.net/
 Source0:	ftp://ftp.gnu.org/aspell/aspell-%{languagecode}-%{src_ver}.tar.bz2
-Patch: aspell-nb-0.50.1-0.utf-filename.patch
+#Patch: aspell-nb-0.50.1-0.utf-filename.patch
 
 BuildRequires:	aspell >= 0.50
 Requires:	aspell >= 0.50
