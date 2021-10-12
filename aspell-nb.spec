@@ -1,6 +1,7 @@
 %define src_ver 0.50.1-0
 %define languageenglazy Norwegian Bokmaal
 %define languagecode nb
+%define aspellrelease 0.60
 %define _enable_debug_packages %{nil}
 %define debug_package %{nil}
 
@@ -12,7 +13,6 @@ Group:		System/Internationalization
 License:	GPLv2
 Url:		http://aspell.sourceforge.net/
 Source0:	ftp://ftp.gnu.org/aspell/aspell-%{languagecode}-%{src_ver}.tar.bz2
-#Patch: aspell-nb-0.50.1-0.utf-filename.patch
 
 BuildRequires:	aspell >= 0.50
 Requires:	aspell >= 0.50
@@ -41,6 +41,7 @@ cp bokmal.alias bokmål.alias
 
 %install
 %make_install
+mv %{buildroot}%{_libdir}/aspell-%{aspellrelease}/'bokm'$'\345''l.alias' %{buildroot}%{_libdir}/aspell-%{aspellrelease}/bokmål.alias
 
 %files
 %doc README Copyright
