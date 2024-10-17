@@ -11,7 +11,7 @@ Version:	0.50.1.0
 Release:	1
 Group:		System/Internationalization
 License:	GPLv2
-Url:		http://aspell.sourceforge.net/
+Url:		https://aspell.sourceforge.net/
 Source0:	ftp://ftp.gnu.org/aspell/aspell-%{languagecode}-%{src_ver}.tar.bz2
 
 BuildRequires:	aspell >= 0.50
